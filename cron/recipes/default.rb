@@ -8,7 +8,7 @@ cron "every_minute" do
 end
 
 cron "everyhour" do
-    minute "*"
+    minute "0"
     hour "*"
     day "*"
     month "*"
@@ -25,4 +25,3 @@ cron "everydayhour8" do
     weekday "*"
     command "cd /srv/www/mobiq_cron_api/current && php ./cron/cron-everydayhour8.php"
 end
-
