@@ -1,10 +1,19 @@
-cron "every_minute" do
+cron "everyminute" do
     minute "*"
     hour "*"
     day "*"
     month "*"
     weekday "*"
     command "cd /srv/www/mobiq_cron_api_sg/current && php ./cron/cron-everyminute.php"
+end
+
+cron "every10minutes" do
+    minute "*/10"
+    hour "*"
+    day "*"
+    month "*"
+    weekday "*"
+    command "cd /srv/www/mobiq_cron_api_sg/current && php ./cron/cron-every10minutes.php"
 end
 
 cron "everyhour" do
@@ -16,12 +25,11 @@ cron "everyhour" do
     command "cd /srv/www/mobiq_cron_api_sg/current && php ./cron/cron-everyhour.php"
 end
 
-# 8:00 GMT, 17:00 JST
-cron "everydayhour8" do
+cron "everyday" do
     minute "0"
-    hour "8"
+    hour "0"
     day "*"
     month "*"
     weekday "*"
-    command "cd /srv/www/mobiq_cron_api_sg/current && php ./cron/cron-everydayhour8.php"
+    command "cd /srv/www/mobiq_cron_api_sg/current && php ./cron/cron-everyday.php"
 end
