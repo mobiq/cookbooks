@@ -1,4 +1,4 @@
 source "https://api.berkshelf.com"
 
-cookbook 'apache2', '~> 5.0.0'
-cookbook 'php', '~> 4.5.0'
+cookbook 'apache2', '~> 3.0.1'
+cookbook 'php', '~> 1.5.0'
